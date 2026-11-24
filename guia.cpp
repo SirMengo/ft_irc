@@ -15,7 +15,6 @@
 	-> PDF: https://cdn.intra.42.fr/pdf/pdf/224615/en.subject.pdf;
 
 * Videos interessante:
-	-> Como criar um server em C++: https://www.youtube.com/watch?v=WDn-htpBlnU;
 	-> Como ter vários client's ativos: https://www.youtube.com/watch?v=dquxuXeZXgo;
 	PS: Esses dois videos são uma sequência.
 	-> Esse foi o video que o Vinicius indicou de como fazer um server: https://www.youtube.com/watch?v=cNdlrbZSkyQ;
