@@ -18,18 +18,11 @@
 
 
 ! Funções para fazer:
-	Get e Set realname;
-	Get e Set nickname;
-	Get e Set username;
-	Get e Set hostname;
-	Check de password;
-	Check se o client ja foi registrado;
-	Check se todas as informações acima são validas.
-	Get e Set inputBuffer;
-	Juntar o buffer novo com o buffer antigo.
-	Checar se o nickname é valido.
-	Limpar o buffer.
-	Check de duplicatas de nickname.
+	Check de password; - Uteis
+	Check se o client ja foi registrado; - Uteis
+	Check se todas as informações acima são validas. - Uteis
+	Checar se o nickname é valido. - Uteis
+	Check de duplicatas de nickname. -  Uteis
 
 ______________________________________________________________________________________
 	* Guia da tua parte (Client), por ordem

@@ -15,8 +15,31 @@ class Client
 		Client();
 		Client(int fd);
 		~Client();
-		void	Client::setRealname(std::string);
-	
+
+		// ? Set Functions
+		void	setRealname(const std::string& realname);
+		void	setNickname(const std::string& nickname);
+		void	setUsername(const std::string& username);
+		void	setHostname(const std::string& hostname);
+		void	setPasswordOk();
+		void	setRegistered();
+		void	setValidatedClient();
+
+		// * Get Functions
+		int		getFd() const;
+		const std::string	getRealname() const;
+		const std::string	getNickname() const;
+		const std::string	getUsername() const;
+		const std::string	getHostname() const;
+		bool	getPasswordOk();
+		bool	getRegistered();
+		bool	getValidatedClient();
+
+		// ! Buffers Functions
+		void	setInputBuffer(const std::string& data);
+		const std::string	getInputBuffer();
+		void	clearBuffer();
+		void    appendToInput(const std::string& data);
 
 	private:
 		int				_fd;

@@ -17,34 +17,104 @@ Client::Client(int fd) : _fd(fd), _realname(""), _nickname(""),
 Client::~Client()
 {}
 
-void	Client::setRealname(std::string)
+// ? Set Functions Names
+
+void	Client::setRealname(const std::string& realname)
 {
-	
+	_realname = realname;
 }
 
-/* Fixed::Fixed()
+void	Client::setNickname(const std::string& nickname)
 {
-	setRawBits(0);
-	std::cout << "Default constructor called" << std::endl; 
+	_nickname = nickname;
 }
 
-Fixed::Fixed(const Fixed &other)
+void	Client::setUsername(const std::string& username)
 {
-	std::cout << "Copy constructor called" << std::endl; 
-	*this = other;
+	_username = username;
 }
 
-Fixed	&Fixed::operator=(const Fixed &other)
+void	Client::setHostname(const std::string& hostname)
 {
-	if (this == &other)
-		return (*this);
-	std::cout << "Copy assignment operator called" << std::endl;
-	_value = other.getRawBits();
-	return (*this);
+	_hostname = hostname;
 }
 
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
-} */
+// ? Set Functions Bool
 
+void	Client::setPasswordOk()
+{
+	_passwordOk = true;
+}
+void	Client::setRegistered()
+{
+	_registered = true;
+}
+
+void	Client::setValidatedClient()
+{
+	_validatedClient = true;
+}
+
+// * Get Functions
+
+int		Client::getFd() const
+{
+	return (_fd);
+}
+
+const	std::string Client::getRealname() const
+{
+	return (_realname);
+}
+
+const	std::string Client::getNickname() const
+{
+	return (_nickname);
+}
+
+const	std::string	Client::getUsername() const
+{
+	return (_username);
+}
+
+const	std::string Client::getHostname() const
+{
+	return (_hostname);
+}
+
+bool	Client::getPasswordOk()
+{
+	return (_passwordOk);
+}
+
+bool	Client::getRegistered()
+{
+	return (_registered);
+}
+
+bool	Client::getValidatedClient()
+{
+	return (_validatedClient);
+}
+
+// ! Buffers Functions
+
+void	Client::setInputBuffer(const std::string& data)
+{
+	_inputBuffer = data;
+}
+
+const std::string	Client::getInputBuffer()
+{
+	return (_inputBuffer);
+}
+
+void	Client::clearBuffer()
+{
+	_inputBuffer.clear();
+}
+
+void	Client::appendToInput(const std::string& data)
+{
+	_inputBuffer += data;
+}
